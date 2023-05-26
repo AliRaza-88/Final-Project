@@ -29,24 +29,25 @@ function Create(props) {
 
   return (
     <>
-      <div className="row">
+      <div className="row d-flex justify-content-center">
         <div className="col-md-6">
-          <div className="mb-2 mt-2">
+          <div className="mb-3 mt-5">
             <Link to="/">
               <button className="btn btn-primary">Home Page</button>
             </Link>
           </div>
-          <div className="bg-primary p-4 text-center">
+          <div className="bg-primary p-4 text-center text-white">
             <h1>Add Todo</h1>
           </div>
           <br />
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} style={{color: props.mode==='light'? 'black' : 'white'}}>
             <div className="form-group">
               <label htmlFor="">Enter New Todo:</label>
               <input
                 type="text"
                 placeholder="New Task"
                 className="form-control"
+                required
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
               />

@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Contact = () => {
+const Contact = (props) => {
   return (
-    <div className='container'>
+    <div className='container' style={{color: props.mode==='light'? 'black' : 'white'}}>
    
     <section className="mb-4">
     
